@@ -24,3 +24,20 @@ function fileExistsInPWD(name)
   local f=io.open(filePath,"r")
   if f~=nil then io.close(f) return filePath else return false end
 end
+
+vim.cmd([[
+function! TabbyTabline() abort
+    return luaeval("require'tabby'.update()")
+endfunction
+function! TabbyRenderTabline() abort
+    return luaeval("require'tabby.tabline.render()")
+endfunction
+]])
+
+vim.api.nvim_create_user_command("ReSource", function()
+  vim.cmd("source %")
+end, {})
+
+vim.api.nvim_create_user_command("Github", function()
+  vim.cmd("!github .")
+end, {})
