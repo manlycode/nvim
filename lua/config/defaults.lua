@@ -17,3 +17,12 @@ vim.opt.wrap = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.termguicolors = true
+vim.opt.clipboard = vim.opt.clipboard + "unnamedplus"
+vim.opt.timeout = true
+vim.opt.timeoutlen = 1000
+vim.opt.ttimeoutlen = 250
+
+-- Disable the "s" keymapping for surround 
+-- functionality
+vim.keymap.set({ "n", "v",  }, "s", "<nop>")
+vim.keymap.set({ "n", "v",  }, "S", "<nop>")
