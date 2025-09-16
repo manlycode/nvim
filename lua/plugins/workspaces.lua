@@ -1,6 +1,9 @@
 return {
 	{
 		"natecraddock/workspaces.nvim",
+    depencencies = {
+      "nvim-tree/nvim-tree.lua"
+    },
 		opts = {
 			-- path to a file to store workspaces data in
 			-- on a unix system this would be ~/.local/share/nvim/workspaces
