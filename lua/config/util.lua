@@ -53,8 +53,10 @@ end
 vim.api.nvim_create_user_command("LazyAddPlugin", function(cmd)
   -- local home_path = vim.fn.expand("~")
   local pluginsPath = "~/.config/nvim/lua/plugins"
+  local pluginsPath = "~/.config/nvim/lua/plugins"
 
-  local pluginAuthorName = cmd.args
+  local githubPrefix = "https://github.com/"
+  local pluginAuthorName = string.gsub(cmd.args, githubPrefix, "")
   local pluginName = split(pluginAuthorName, "//")[2]
   local filePath = pluginsPath .. "/" .. string.gsub(pluginName, ".nvim", "") .. ".lua"
 

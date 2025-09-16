@@ -1,3 +1,4 @@
+vim.opt.shell = "/bin/zsh"
 vim.opt.smartcase = true
 vim.opt.expandtab = true
 vim.opt.autoindent= true
