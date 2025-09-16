@@ -46,6 +46,7 @@ return {
 				open_pre = {},
 				open = { 
 					"NvimTreeOpen", 
+          "wincmd l",
 					-- function()
 						--   require("telescope.builtin").find_files({follow=true})
 						-- end,
