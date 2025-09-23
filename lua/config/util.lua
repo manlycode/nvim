@@ -71,6 +71,8 @@ vim.api.nvim_create_user_command("LazyAddPlugin", function(cmd)
     "    '" .. pluginAuthorName .. "',",
     "    -- dependencies = {},",
     "    -- opts = {},",
+    "    -- config = function()",
+    "    -- end",
     "  }",
     "}"
   }

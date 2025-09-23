@@ -3,11 +3,11 @@ vim.env.PATH = "/Users/manlycode/.asdf/shims:" .. vim.env.PATH
 
 vim.opt.smartcase = true
 vim.opt.expandtab = true
-vim.opt.autoindent= true
+vim.opt.autoindent = true
 vim.opt.smarttab = true
-vim.opt.tabstop = 2 
-vim.opt.shiftwidth=2
-vim.opt.softtabstop=2
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
 vim.opt.number = true
 vim.opt.showcmd = true
 -- vim.opt.nojoinspaces = true
@@ -25,7 +25,7 @@ vim.opt.timeout = true
 vim.opt.timeoutlen = 1000
 vim.opt.ttimeoutlen = 250
 vim.opt.signcolumn = yes
--- Disable the "s" keymapping for surround 
+-- Disable the "s" keymapping for surround
 -- functionality
-vim.keymap.set({ "n", "v",  }, "s", "<nop>")
-vim.keymap.set({ "n", "v",  }, "S", "<nop>")
+vim.keymap.set({ "n", "v", }, "s", "<nop>")
+vim.keymap.set({ "n", "v", }, "S", "<nop>")

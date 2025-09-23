@@ -6,6 +6,7 @@ local modules = {
   "config.workspace",
   "config.keymap",
   "config.colorscheme",
+  "config.autocmd",
 }
 
 for _, module in ipairs(modules) do
