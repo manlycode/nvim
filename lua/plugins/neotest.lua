@@ -20,26 +20,27 @@ return {
               enabled = true,
               -- When this is true (the default), it will replace all neotest.run.* commands
               force_default = false,
-            }, 
+            },
             status = { virtual_text = true },
             output = { open_on_run = true },
             quickfix = {
               open = function()
-                if LazyVim.has("trouble.nvim") then
-                  require("trouble").open({ mode = "quickfix", focus = false })
-                else
-                  vim.cmd("copen")
-                end
+                require("trouble").open({ mode = "quickfix", focus = false })
               end,
             },
             adapters = {
               require("neotest-rspec")({
                 rspec_cmd = function()
-                  return vim.tbl_flatten({
+                  vim.totable({
                     "/Users/manlycode/.asdf/shims/bundle",
                     "exec",
                     "rspec"
                   })
+                  -- return vim.tbl_flatten({
+                  --   "/Users/manlycode/.asdf/shims/bundle",
+                  --   "exec",
+                  --   "rspec"
+                  -- })
                 end
               })
             }
@@ -48,20 +49,20 @@ return {
         keys = {
           {"<leader>tl", "<cmd>echo 'hello line'<cr>", desc = "Run test at line", mode = "n"},
           {
-            "<leader>ts", 
-            function() 
+            "<leader>ts",
+            function()
               require("neotest").summary.toggle()
-            end, 
-            desc = "Toggle test summary", 
+            end,
+            desc = "Toggle test summary",
             mode = "n"
           },
           {
-            "<leader>tf", 
-            function() 
+            "<leader>tf",
+            function()
               require("neotest").run.run(vim.fn.expand("%"))
               require("neotest").summary.open()
-            end, 
-            desc = "Run test at line", 
+            end,
+            desc = "Run test at line",
             mode = "n"
           }
         }

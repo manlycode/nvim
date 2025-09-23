@@ -11,7 +11,7 @@ function os.capture(cmd, raw)
   return s
 end
 
-function updateBG(lightTheme, darkTheme)
+local function updateBG(lightTheme, darkTheme)
   local dmStatus = os.capture("dark-mode status")
   if dmStatus == "off" then
     vim.cmd([[set bg=light]])
@@ -26,7 +26,14 @@ end
 --   "base16-gruvbox-material-light-medium",
 --   "base16-gruvbox-material-dark-medium"
 -- )
+--
+
 updateBG(
   "base24-gruvbox-light",
   "base24-gruvbox-dark"
 )
+
+-- updateBG(
+--   "retrobox",
+--   "retrobox"
+-- )

@@ -7,8 +7,8 @@ if vim.g.neovide then
   -- vim.g.neovide_scale_factor = 1.0
   vim.g.neovide_padding_top = 0
   vim.g.neovide_padding_bottom = 0
-  vim.g.neovide_padding_right = 15
-  vim.g.neovide_padding_left = 15
+  -- vim.g.neovide_padding_right = 15
+  -- vim.g.neovide_padding_left = 15
   vim.g.neovide_refresh_rate = 120
 
   nmap("<D-t>", "<cmd>tabe<cr>")

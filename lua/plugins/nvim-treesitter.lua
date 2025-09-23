@@ -5,6 +5,7 @@ return {
       "nvim-treesitter/nvim-treesitter-textobjects"
     },
     opts = {
+      ensure_installed = { "python", "yaml", "latex", "html", "clojure", "css", "scss" },
       textobjects = {
         select = {
           enable = true,

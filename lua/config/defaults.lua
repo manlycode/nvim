@@ -1,4 +1,6 @@
 vim.opt.shell = "/bin/zsh"
+vim.env.PATH = "/Users/manlycode/.asdf/shims:" .. vim.env.PATH
+
 vim.opt.smartcase = true
 vim.opt.expandtab = true
 vim.opt.autoindent= true
@@ -22,7 +24,7 @@ vim.opt.clipboard = vim.opt.clipboard + "unnamedplus"
 vim.opt.timeout = true
 vim.opt.timeoutlen = 1000
 vim.opt.ttimeoutlen = 250
-
+vim.opt.signcolumn = yes
 -- Disable the "s" keymapping for surround 
 -- functionality
 vim.keymap.set({ "n", "v",  }, "s", "<nop>")

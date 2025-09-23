@@ -38,6 +38,10 @@ vim.api.nvim_create_user_command("ReSource", function()
   vim.cmd("source %")
 end, {})
 
+vim.api.nvim_create_user_command("Source", function()
+  vim.cmd("source ~/.config/nvim/init.lua")
+end, {})
+
 vim.api.nvim_create_user_command("Github", function()
   vim.cmd("!github .")
 end, {})
