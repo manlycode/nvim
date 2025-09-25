@@ -4,12 +4,26 @@ return {
     dependencies = {
       "nvim-treesitter/nvim-treesitter-textobjects"
     },
+    build = ":TSUpdate",
     opts = {
-      ensure_installed = { "python", "yaml", "latex", "html", "clojure", "css", "scss" },
+      ensure_installed = {
+        "python",
+        "yaml",
+        "latex",
+        "html",
+        "clojure",
+        "css",
+        "scss",
+        "elixir",
+        "eex",
+        "heex"
+      },
+      highlight = {
+        enable = true
+      },
       textobjects = {
         select = {
           enable = true,
-
           -- Automatically jump forward to textobj, similar to targets.vim
           lookahead = true,
 
@@ -33,7 +47,7 @@ return {
           -- mapping query_strings to modes.
           selection_modes = {
             ['@parameter.outer'] = 'v', -- charwise
-            ['@function.outer'] = 'V', -- linewise
+            ['@function.outer'] = 'V',  -- linewise
             ['@class.outer'] = '<c-v>', -- blockwise
           },
           -- If you set this to `true` (default is `false`) then any textobject is
@@ -49,6 +63,9 @@ return {
         },
       },
     },
+
+    config = function(_, opts)
+      require("nvim-treesitter.configs").setup(opts)
+    end
   }
 }
-

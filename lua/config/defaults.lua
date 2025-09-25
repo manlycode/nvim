@@ -24,7 +24,8 @@ vim.opt.clipboard = vim.opt.clipboard + "unnamedplus"
 vim.opt.timeout = true
 vim.opt.timeoutlen = 1000
 vim.opt.ttimeoutlen = 250
-vim.opt.signcolumn = yes
+vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "yes"
 -- Disable the "s" keymapping for surround
 -- functionality
 vim.keymap.set({ "n", "v", }, "s", "<nop>")

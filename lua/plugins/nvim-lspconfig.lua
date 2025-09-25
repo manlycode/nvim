@@ -6,6 +6,10 @@ return {
     },
     -- opts = {},
     config = function()
+      vim.lsp.config('elixir_ls', {
+        cmd = { "elixir_ls" }
+      })
+
       vim.lsp.config('lua_ls', {
         on_init = function(client)
           if client.workspace_folders then
@@ -55,10 +59,11 @@ return {
         }
       })
       vim.lsp.enable('lua_ls')
+      vim.lsp.enable('elixir_ls')
 
       vim.lsp.config("stylelint_lsp", {
         -- Define the file types stylelint-lsp should apply to
-        filetypes = { "css", "scss", "less", "postcss" },
+        filetypes = { "css", "scss", "less", "postcss", "elixir", "eex", "heex" },
         -- Define root directories where stylelint config files are found
         root_dir = require('lspconfig.util').root_pattern('.stylelintrc', 'package.json'),
         -- Optional: Customize settings passed to stylelint-lsp

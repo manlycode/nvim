@@ -32,4 +32,3 @@ if vim.g.neovide then
   nmap("<D-Left>", "<Esc>^")
   nmap("<D-Right>", "<Esc>$")
 end
-

@@ -11,18 +11,23 @@ function imap(shortcut, command)
 end
 
 function cmap(shortcut, command)
-  vim.api.nvim_set_keymap("c", shortcut, command, { noremap = true, silent = false})
+  vim.api.nvim_set_keymap("c", shortcut, command, { noremap = true, silent = false })
 end
 
 function tmap(shortcut, command)
-  vim.api.nvim_set_keymap("t", shortcut, command, { noremap = true, silent = false})
+  vim.api.nvim_set_keymap("t", shortcut, command, { noremap = true, silent = false })
 end
 
 function fileExistsInPWD(name)
   local cwd = vim.loop.cwd()
-  local filePath = cwd .. "/".. name
-  local f=io.open(filePath,"r")
-  if f~=nil then io.close(f) return filePath else return false end
+  local filePath = cwd .. "/" .. name
+  local f = io.open(filePath, "r")
+  if f ~= nil then
+    io.close(f)
+    return filePath
+  else
+    return false
+  end
 end
 
 vim.cmd([[
@@ -46,17 +51,20 @@ vim.api.nvim_create_user_command("Github", function()
   vim.cmd("!github .")
 end, {})
 
+vim.api.nvim_create_user_command("ArgWrap", function()
+  require("trevj").format_at_cursor()
+end, {})
+
 local function split(s, delimiter)
-    local result = {}
-    for match in string.gmatch(s, "([^"..delimiter.."]+)") do
-        table.insert(result, match)
-    end
-    return result
+  local result = {}
+  for match in string.gmatch(s, "([^" .. delimiter .. "]+)") do
+    table.insert(result, match)
+  end
+  return result
 end
 
 vim.api.nvim_create_user_command("LazyAddPlugin", function(cmd)
   -- local home_path = vim.fn.expand("~")
-  local pluginsPath = "~/.config/nvim/lua/plugins"
   local pluginsPath = "~/.config/nvim/lua/plugins"
 
   local githubPrefix = "https://github.com/"
@@ -77,7 +85,7 @@ vim.api.nvim_create_user_command("LazyAddPlugin", function(cmd)
     "}"
   }
 
-  vim.system({"touch", filePath})
+  vim.system({ "touch", filePath })
   vim.cmd {
     cmd = "vs",
     args = {
@@ -87,14 +95,13 @@ vim.api.nvim_create_user_command("LazyAddPlugin", function(cmd)
 
   local buffer_handle = vim.api.nvim_get_current_buf()
   vim.api.nvim_buf_set_lines(
-    buffer_handle, 
-    0, 
-    0, 
-    false, 
-    template 
+    buffer_handle,
+    0,
+    0,
+    false,
+    template
   )
 end, {
   desc = "Adds a plugin spec to Neovim config",
   nargs = 1
 })
-
