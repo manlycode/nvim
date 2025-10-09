@@ -30,3 +30,6 @@ vim.opt.signcolumn = "yes"
 -- functionality
 vim.keymap.set({ "n", "v", }, "s", "<nop>")
 vim.keymap.set({ "n", "v", }, "S", "<nop>")
+
+vim.g.python_host_prog = '/Users/manlycode/.asdf/shims/python'
+vim.g.python3_host_prog = '/Users/manlycode/.asdf/shims/python3'

@@ -16,7 +16,8 @@ return {
         "scss",
         "elixir",
         "eex",
-        "heex"
+        "heex",
+        "ruby"
       },
       highlight = {
         enable = true
