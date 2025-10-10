@@ -11,7 +11,7 @@ return {
     },
     -- opts = {},
     config = function()
-      local cmp = require'cmp'
+      local cmp = require 'cmp'
 
       -- Global setup.
       cmp.setup({
@@ -72,11 +72,12 @@ return {
 
       -- Setup lspconfig.
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
-      -- require('lspconfig')[%YOUR_LSP_SERVER%].setup {
-      --   capabilities = capabilities
-      -- }
+      vim.lsp.config('kotlin_lsp', {
+        config = {
+          capabilities = capabilities
+        }
+      })
     end
 
   }
 }
-

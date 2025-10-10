@@ -17,7 +17,8 @@ return {
         "elixir",
         "eex",
         "heex",
-        "ruby"
+        "ruby",
+        "kotlin"
       },
       highlight = {
         enable = true

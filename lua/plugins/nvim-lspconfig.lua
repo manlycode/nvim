@@ -6,6 +6,9 @@ return {
     },
 
     config = function()
+      -- -------------------------------------------------------
+      -- Lua
+      -- -------------------------------------------------------
       vim.lsp.enable("lua_ls")
       vim.lsp.config("lua_ls", {
         on_init = function(client)
@@ -56,108 +59,15 @@ return {
         }
       })
 
-      -- Ruby
-      vim.lsp.enable("ruby_lsp")
-      vim.lsp.config("ruby_lsp", {
-        mason = false,
-        cmd = { vim.fn.expand("~/.asdf/shims/ruby-lsp") },
-      })
+      -- -------------------------------------------------------
+      -- Bash/Shell
+      -- -------------------------------------------------------
+      vim.lsp.enable('bashls')
 
-      -- Elixir
-      vim.lsp.enable("elixir_ls")
-      vim.lsp.config("elixir_ls", {
-        cmd = { vim.fn.expand("elixir_ls") },
-      })
-
-      -- CSS
-      vim.lsp.enable("stylelint_lsp")
-      vim.lsp.config("stylelint_lsp", {
-        filetypes = { "css", "scss", "less", "postcss" },
-        root_dir = require('lspconfig.util').root_pattern('.stylelintrc', 'package.json'),
-      })
+      -- -------------------------------------------------------
+      -- Kotlin
+      -- -------------------------------------------------------
+      vim.lsp.enable('kotlin_lsp')
     end
-
-
-
-    --   vim.lsp.config('lua_ls', {
-    --     on_init = function(client)
-    --       if client.workspace_folders then
-    --         local path = client.workspace_folders[1].name
-    --         if
-    --             path ~= vim.fn.stdpath('config')
-    --             and (vim.uv.fs_stat(path .. '/.luarc.json') or vim.uv.fs_stat(path .. '/.luarc.jsonc'))
-    --         then
-    --           return
-    --         end
-    --       end
-    --
-    --       client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
-    --         runtime = {
-    --           -- Tell the language server which version of Lua you're using (most
-    --           -- likely LuaJIT in the case of Neovim)
-    --           version = 'LuaJIT',
-    --           -- Tell the language server how to find Lua modules same way as Neovim
-    --           -- (see `:h lua-module-load`)
-    --           path = {
-    --             'lua/?.lua',
-    --             'lua/?/init.lua',
-    --           },
-    --         },
-    --         -- Make the server aware of Neovim runtime files
-    --         workspace = {
-    --           checkThirdParty = false,
-    --           library = {
-    --             vim.env.VIMRUNTIME
-    --             -- Depending on the usage, you might want to add additional paths
-    --             -- here.
-    --             -- '${3rd}/luv/library'
-    --             -- '${3rd}/busted/library'
-    --           }
-    --           -- Or pull in all of 'runtimepath'.
-    --           -- NOTE: this is a lot slower and will cause issues when working on
-    --           -- your own configuration.
-    --           -- See https://github.com/neovim/nvim-lspconfig/issues/3189
-    --           -- library = {
-    --           --   vim.api.nvim_get_runtime_file('', true),
-    --           -- }
-    --         }
-    --       })
-    --     end,
-    --     settings = {
-    --       Lua = {}
-    --     }
-    --   })
-    --
-    --   vim.lsp.enable('lua_ls')
-    --   vim.lsp.enable('elixir_ls')
-    --   vim.lsp.enable('bashls')
-    --   vim.lsp.enable('ruby-lsp')
-    --   vim.lsp.config('ruby_lsp', {
-    --     init_options = {
-    --       formatter = "standard",
-    --       linters = { "standard" }
-    --     }
-    --   })
-    --
-    --   vim.lsp.config("stylelint_lsp", {
-    --     -- Define the file types stylelint-lsp should apply to
-    --     filetypes = { "css", "scss", "less", "postcss", "elixir", "eex", "heex", "sh" },
-    --     -- Define root directories where stylelint config files are found
-    --     root_dir = require('lspconfig.util').root_pattern('.stylelintrc', 'package.json'),
-    --     -- Optional: Customize settings passed to stylelint-lsp
-    --     settings = {
-    --       stylelintplus = {
-    --         -- See stylelint-lsp documentation for available options
-    --         -- For example, to enable auto-fix on save:
-    --         -- autoFixOnSave = true,
-    --       },
-    --     },
-    --     -- Optional: on_attach function to customize client behavior
-    --     -- on_attach = function(client, bufnr)
-    --     -- -- Example: Disable document formatting if another formatter handles it
-    --     -- -- client.server_capabilities.document_formatting = false
-    --     -- end,
-    --   })
-    -- end
   }
 }

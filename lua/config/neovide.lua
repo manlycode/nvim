@@ -2,7 +2,8 @@ if vim.g.neovide then
   -- vim.o.guifont = "Hack Nerd Font Mono:h14:#e-subpixelantialias:#h-full"
   -- vim.o.guifont = "Hack Nerd Font Mono:h14:#e-subpixelantialias:#h-normal"
   -- vim.o.guifont = "Hack Nerd Font Mono:h16:#e-subpixelantialias:#h-slight"
-  vim.o.guifont = "Hack Nerd Font Mono:h14:#e-subpixelantialias:#h-none"
+  -- vim.o.guifont = "Hack Nerd Font Mono:h14:#e-subpixelantialias:#h-none"
+  vim.o.guifont = "Zed Mono:h16:#e-subpixelantialias:#h-none"
   vim.opt.linespace = 6
   -- vim.g.neovide_scale_factor = 1.0
   vim.g.neovide_padding_top = 0
@@ -31,4 +32,5 @@ if vim.g.neovide then
   imap("<D-Right>", "<Esc>$A")
   nmap("<D-Left>", "<Esc>^")
   nmap("<D-Right>", "<Esc>$")
+  nmap("<D-r>", "<cmd>CompilerOpen<cr>")
 end
