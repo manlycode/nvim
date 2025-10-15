@@ -14,6 +14,9 @@ for _, module in ipairs(modules) do
   require(module)
 end
 
+PrintCWD()
+RequireDir("language")
+
 -- require("config.defaults")
 -- require("config.util")
 -- require("config.lazy")
