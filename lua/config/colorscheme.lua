@@ -31,10 +31,15 @@ end
 if vim.g.vscode then
 else
   updateBG(
-    "base24-gruvbox-light",
-    "base24-gruvbox-dark"
+    "base16-gruvbox-material-light-soft",
+    "base16-gruvbox-material-dark-hard"
   )
 end
+
+-- updateBG(
+--   "base24-gruvbox-light",
+--   "base24-gruvbox-dark"
+-- )
 
 -- updateBG(
 --   "retrobox",

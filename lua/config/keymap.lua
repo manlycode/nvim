@@ -19,6 +19,15 @@ vim.keymap.set('n', '<leader>se', ":T exit<cr>", { desc = 'Send the current file
 
 vim.keymap.set('n', '<leader>se', ":T exit<cr>", { desc = 'Send the current file', silent = true, noremap = true })
 
+local modes = { "i", "c" }
+for _, mode in ipairs(modes) do
+  vim.keymap.set(mode, "<C-a>", "<Home>")
+  vim.keymap.set(mode, "<C-e>", "<End>")
+  vim.keymap.set(mode, "<C-f>", "<Right>")
+  vim.keymap.set(mode, "<C-b>", "<Left>")
+end
+
+
 vim.keymap.set('n', "<M-space>", function() vim.diagnostic.open_float() end)
 
 vim.keymap.set('n', '<D-,>', function()
