@@ -1,4 +1,6 @@
-print("kotlin got loaded....")
+-- ------------------------------------------------------
+-- LSP
+-- ------------------------------------------------------
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 vim.lsp.config("kotlin_lsp",
@@ -11,3 +13,9 @@ vim.lsp.config("kotlin_lsp",
     },
   }
 )
+
+vim.lsp.enable("kotlin_lsp")
+
+-- ------------------------------------------------------
+-- Treesitter
+-- ------------------------------------------------------
