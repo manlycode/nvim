@@ -28,11 +28,22 @@ end
 -- )
 --
 
+-- updateBG(
+--   "base16-gruvbox-material-light-medium",
+--   "base24-solarized-dark-higher-contrast"
+--   "base24-solarized-dark-patched"
+-- )
+--
+
+--   Nice dark colorschemes
+--   "base24-solarized-dark-higher-contrast"
+--   "base24-solarized-dark-patched"
+
 if vim.g.vscode then
 else
   updateBG(
     "base16-gruvbox-material-light-soft",
-    "base16-gruvbox-material-dark-hard"
+    "onedark"
   )
 end
 

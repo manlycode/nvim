@@ -33,3 +33,6 @@ vim.keymap.set({ "n", "v", }, "S", "<nop>")
 
 vim.g.python_host_prog = '/Users/manlycode/.asdf/shims/python'
 vim.g.python3_host_prog = '/Users/manlycode/.asdf/shims/python3'
+
+-- vim.opt.wildmode = "longest"
+vim.opt.wildmode = "longest:full,list"
