@@ -77,6 +77,12 @@ return {
           capabilities = capabilities
         }
       })
+
+      vim.lsp.config('lua_ls', {
+        config = {
+          capabilities = capabilities
+        }
+      })
     end
 
   }
