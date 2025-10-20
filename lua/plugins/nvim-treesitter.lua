@@ -18,7 +18,11 @@ return {
         "eex",
         "heex",
         "ruby",
-        "kotlin"
+        "kotlin",
+        "fennel",
+        "clojure",
+        "regex",
+        "bash"
       },
       highlight = {
         enable = true

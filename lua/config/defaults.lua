@@ -36,3 +36,4 @@ vim.g.python3_host_prog = '/Users/manlycode/.asdf/shims/python3'
 
 -- vim.opt.wildmode = "longest"
 vim.opt.wildmode = "longest:full,list"
+vim.g.maplocalleader = ','
