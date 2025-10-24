@@ -9,6 +9,8 @@ local modules = {
   "config.autocmd",
 }
 
+vim.g.maplocalleader = ','
+
 for _, module in ipairs(modules) do
   package.loaded[module] = nil
   require(module)
