@@ -36,7 +36,21 @@ vim.g.python3_host_prog = '/Users/manlycode/.asdf/shims/python3'
 
 -- vim.opt.wildmode = "longest"
 vim.opt.wildmode = "longest:full,list"
-vim.g.maplocalleader = ','
+
+local auto_source = vim.api.nvim_create_augroup("auto_source.lua", { clear = true })
+vim.api.nvim_create_autocmd("BufWritePost", {
+  group = auto_source,
+  desc = "Auto source workspace files",
+  pattern = "workspace.lua, init.lua",
+  callback = function()
+    local current_file = vim.fn.expand('%')
+    print("Sourcing " .. current_file)
+    vim.cmd([[
+      source %
+    ]])
+  end
+})
+
 -- Diagnostics icons
 local symbols = { Error = "󰅙", Info = "󰋼", Hint = "󰌵", Warn = "" }
 
