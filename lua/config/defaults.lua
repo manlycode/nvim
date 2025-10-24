@@ -37,3 +37,10 @@ vim.g.python3_host_prog = '/Users/manlycode/.asdf/shims/python3'
 -- vim.opt.wildmode = "longest"
 vim.opt.wildmode = "longest:full,list"
 vim.g.maplocalleader = ','
+-- Diagnostics icons
+local symbols = { Error = "󰅙", Info = "󰋼", Hint = "󰌵", Warn = "" }
+
+for name, icon in pairs(symbols) do
+  local hl = "DiagnosticSign" .. name
+  vim.fn.sign_define(hl, { text = icon, numhl = hl, texthl = hl })
+end
