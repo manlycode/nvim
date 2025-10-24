@@ -15,4 +15,4 @@ vim.lsp.enable("clojure_lsp")
 local Rule = require('nvim-autopairs.rule')
 local npairs = require('nvim-autopairs')
 
-npairs.add_rule(Rule("'", "'", { "-closure", "-clj", "-edn" }))
+require("nvim-autopairs").get_rule("'")[1].not_filetypes = { "clojure", "clj", "edn" }
