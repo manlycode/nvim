@@ -13,6 +13,18 @@ vim.lsp.config("cmake",
   }
 )
 vim.lsp.enable("cmake")
+vim.lsp.config("clangd",
+  {
+    capabilities = capabilities,
+    formatter = "",
+    -- filetypes = { "cpp" },
+    -- init_options = {
+    --  formatter = "",
+    --  linters = { "" }
+    -- },
+  }
+)
+vim.lsp.enable("clangd")
 -- ------------------------------------------------------
 -- Treesitter
 -- ------------------------------------------------------
