@@ -25,7 +25,7 @@ return {
         "bash",
         "sql",
         "cpp",
-        "clang"
+        "c"
       },
       highlight = {
         enable = true
