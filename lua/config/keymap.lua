@@ -11,7 +11,7 @@ vim.keymap.set('t', '<esc><esc>', "<C-\\><C-n>", { desc = 'Source the current fi
 
 vim.keymap.set('n', '<leader>sf', ":TREPLSendFile<cr>", { desc = 'Send the current file', silent = true, noremap = true })
 vim.keymap.set('n', '<leader>sl', ":TREPLSendLine<cr>", { desc = 'Send the current file', silent = true, noremap = true })
-vim.keymap.set('n', '<leader>ss', ":TREPLSendSelection<cr>",
+vim.keymap.set('v', '<leader>ss', ":TREPLSendSelection<cr>",
   { desc = 'Send the current file', silent = true, noremap = true })
 vim.keymap.set('n', '<leader>sp', "vap:TREPLSendSelection<cr>",
   { desc = 'Send the current file', silent = true, noremap = true })
