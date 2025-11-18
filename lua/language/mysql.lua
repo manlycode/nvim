@@ -1,0 +1,19 @@
+-- https://github.com/joe-re/sql-language-server
+-- ------------------------------------------------------
+-- LSP
+-- ------------------------------------------------------
+-- local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- vim.lsp.config("mysql",
+--   {
+--     capabilities = capabilities,
+--     -- filetypes = { "mysql" },
+--     -- init_options = {
+--     --  formatter = "",
+--     --  linters = { "" }
+--     -- },
+--   }
+-- )
+vim.lsp.enable("sqls")
+-- ------------------------------------------------------
+-- Treesitter
+-- ------------------------------------------------------
