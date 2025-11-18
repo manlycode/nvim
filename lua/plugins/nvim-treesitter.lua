@@ -22,7 +22,10 @@ return {
         "fennel",
         "clojure",
         "regex",
-        "bash"
+        "bash",
+        "sql",
+        "cpp",
+        "clang"
       },
       highlight = {
         enable = true
