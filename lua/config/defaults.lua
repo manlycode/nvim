@@ -26,6 +26,12 @@ vim.opt.timeoutlen = 1000
 vim.opt.ttimeoutlen = 250
 vim.opt.signcolumn = "yes"
 vim.opt.signcolumn = "yes"
+
+-- Prevent automatic comment on next line
+vim.cmd([[
+set formatoptions-=cro
+]])
+
 -- Disable the "s" keymapping for surround
 -- functionality
 vim.keymap.set({ "n", "v", }, "s", "<nop>")
@@ -58,3 +64,4 @@ for name, icon in pairs(symbols) do
   local hl = "DiagnosticSign" .. name
   vim.fn.sign_define(hl, { text = icon, numhl = hl, texthl = hl })
 end
+
