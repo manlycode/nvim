@@ -10,7 +10,8 @@ return {
         width = 30,
       },
       renderer = {
-        hidden_display = "none",
+        highlight_hidden = "all",
+        hidden_display = "all",
         group_empty = true,
       },
       filters = {
