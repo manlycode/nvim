@@ -7,6 +7,7 @@ vim.keymap.set('n', '<leader>nnn', ":NvimTreeToggle<CR>", { desc = 'Source the c
 vim.keymap.set('n', '<leader>nnf', ":NvimTreeFindFile<CR>", { desc = 'Source the current file' })
 -- vim.keymap.set('t', '<esc><esc>', "hello there", { desc = 'Source the current file', silent = true, noremap = true })
 vim.keymap.set('t', '<esc><esc>', "<C-\\><C-n>", { desc = 'Source the current file', silent = true, noremap = true })
+vim.keymap.set('t', '<D-v>', '<C-\\><C-n>"+pi', { desc = 'Source the current file', silent = true, noremap = true })
 
 
 vim.keymap.set('n', '<leader>sf', ":TREPLSendFile<cr>", { desc = 'Send the current file', silent = true, noremap = true })

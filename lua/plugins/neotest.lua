@@ -10,6 +10,7 @@ return {
       "ChristianChiarulli/neovim-codicons",
       "jfpedroza/neotest-elixir",
       "olimorris/neotest-rspec",
+      'orjangj/neotest-ctest',
     },
 
     config = function()
@@ -30,7 +31,6 @@ return {
           end,
         },
         adapters = {
-
           require("neotest-elixir"),
           require("neotest-rspec")({
             rspec_cmd = function()

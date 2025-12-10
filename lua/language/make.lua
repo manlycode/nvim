@@ -2,34 +2,17 @@
 -- LSP
 -- ------------------------------------------------------
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-vim.lsp.config("cmake",
+vim.lsp.config("autotools_ls",
   {
     capabilities = capabilities,
-    -- filetypes = { "cpp" },
+    -- filetypes = { "make" },
     -- init_options = {
     --  formatter = "",
     --  linters = { "" }
     -- },
   }
 )
-vim.lsp.enable("cmake")
-
-vim.lsp.config("clangd",
-  {
-    capabilities = capabilities,
-    cmd = {
-      "clangd",
-      "--fallback-style=webkit",
-      "--clang-tidy"
-    },
-    -- filetypes = { "cpp" },
-    -- init_options = {
-    --  formatter = "",
-    --  linters = { "" }
-    -- },
-  }
-)
-vim.lsp.enable("clangd")
+vim.lsp.enable("autotools_ls")
 -- ------------------------------------------------------
 -- Treesitter
 -- ------------------------------------------------------

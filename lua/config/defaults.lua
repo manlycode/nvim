@@ -30,6 +30,7 @@ vim.opt.signcolumn = "yes"
 -- Prevent automatic comment on next line
 vim.cmd([[
 set formatoptions-=cro
+filetype plugin indent on
 ]])
 
 -- Disable the "s" keymapping for surround
@@ -64,4 +65,3 @@ for name, icon in pairs(symbols) do
   local hl = "DiagnosticSign" .. name
   vim.fn.sign_define(hl, { text = icon, numhl = hl, texthl = hl })
 end
-

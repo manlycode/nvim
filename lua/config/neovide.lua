@@ -3,7 +3,7 @@ if vim.g.neovide then
   -- vim.o.guifont = "Hack Nerd Font Mono:h14:#e-subpixelantialias:#h-normal"
   -- vim.o.guifont = "Hack Nerd Font Mono:h16:#e-subpixelantialias:#h-slight"
   -- vim.o.guifont = "Hack Nerd Font Mono:h14:#e-subpixelantialias:#h-none"
-  vim.o.guifont = "ZedMono Nerd Font:h16:#e-subpixelantialias:#h-none"
+  vim.o.guifont = "ZedMono Nerd Font:h15:#e-subpixelantialias:#h-none"
   -- vim.o.guifont = "Zed Mono:h16:#e-subpixelantialias:#h-none"
   -- vim.o.guifont = "Hack Nerd Font:h16:#e-subpixelantialias:#h-none"
   vim.opt.linespace = 6
@@ -35,4 +35,36 @@ if vim.g.neovide then
   nmap("<D-Left>", "<Esc>^")
   nmap("<D-Right>", "<Esc>$")
   nmap("<D-r>", "<cmd>CompilerOpen<cr>")
+
+  -- RefreshGuiFont = function()
+  --   vim.opt.guifont = string.format("%s:h%s", vim.g.gui_font_face, vim.g.gui_font_size)
+  -- end
+  --
+  -- ResizeGuiFont = function(delta)
+  --   vim.g.gui_font_size = vim.g.gui_font_size + delta
+  --   RefreshGuiFont()
+  -- end
+  --
+  -- ResetGuiFont = function()
+  --   vim.g.gui_font_size = vim.g.gui_font_default_size
+  --   RefreshGuiFont()
+  -- end
+  -- vim.keymap.set(
+  --   { 'n', 'i' },
+  --   "<D-+>",
+  --   function() ResizeGuiFont(1) end,
+  --   { noremap = true, silent = true }
+  -- )
+  -- vim.keymap.set(
+  --   { 'n', 'i' },
+  --   "<D-->",
+  --   function() ResizeGuiFont(-1) end,
+  --   { noremap = true, silent = true }
+  -- )
+  -- vim.keymap.set(
+  --   { 'n', 'i' },
+  --   "<D-BS>",
+  --   function() ResetGuiFont() end,
+  --   { noremap = true, silent = true }
+  -- )
 end

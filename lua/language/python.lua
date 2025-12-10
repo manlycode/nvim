@@ -1,16 +1,16 @@
 -- ------------------------------------------------------
 -- LSP
 -- ------------------------------------------------------
-vim.lsp.config("ruby_lsp", {
-  init_options = {
-    formatter = "standard",
-    linters = { "standard" }
-  },
-  mason = false,
-  cmd = { vim.fn.expand("~/.asdf/shims/ruby-lsp") },
+vim.lsp.config("basedpyright", {
+  basedpyright = {
+    analysis = {
+      autoSearchPaths = true,
+      diagnosticMode = "openFilesOnly",
+      useLibraryCodeForTypes = true
+    }
+  }
 })
-
-vim.lsp.enable("ruby_lsp")
+vim.lsp.enable('basedpyright')
 
 -- ------------------------------------------------------
 -- Treesitter
