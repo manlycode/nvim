@@ -28,3 +28,4 @@ RequireDir("language")
 -- require("config.keymap")
 -- require("config.colorscheme")
 --
+require("todo-comments").setup()

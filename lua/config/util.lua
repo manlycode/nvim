@@ -43,6 +43,14 @@ vim.api.nvim_create_user_command("ReSource", function()
   vim.cmd("source %")
 end, {})
 
+vim.api.nvim_create_user_command("VSCode", function()
+  vim.cmd("silent !code .")
+end, {})
+
+vim.api.nvim_create_user_command("Cursor", function()
+  vim.cmd("silent !cursor .")
+end, {})
+
 vim.api.nvim_create_user_command("Source", function()
   vim.cmd("source ~/.config/nvim/init.lua")
 end, {})
