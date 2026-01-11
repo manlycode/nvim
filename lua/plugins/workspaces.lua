@@ -54,12 +54,16 @@ return {
           --   require("telescope.builtin").find_files({follow=true})
           -- end,
           function()
+            -- Load the `workspace.lua` file if it exists
             local path = fileExistsInPWD("workspace.lua")
             if path then
               vim.cmd("source" .. path)
             else
               print("no workspace.lua file found")
             end
+
+            -- Open the `README.md` file
+            vim.cmd("e README.md")
           end
         },
       },
