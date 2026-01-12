@@ -1,4 +1,3 @@
-print("lazy.lua start....")
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -50,5 +49,3 @@ else
     checker = { enabled = true },
   })
 end
-
-print("lazy.lua end....")

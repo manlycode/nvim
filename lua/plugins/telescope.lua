@@ -10,7 +10,6 @@ return {
     },
 
     config = function()
-      print("telescope got loaded....")
       local telescope = require('telescope')
       telescope.load_extension("workspaces")
 
