@@ -2,15 +2,15 @@ return {
   {
     "nvim-telescope/telescope.nvim", 
     dependencies = { 
-	'nvim-lua/plenary.nvim', 
-	'nvim-telescope/telescope-live-grep-args.nvim',
-	'natecraddock/workspaces.nvim'
-
+    	'nvim-lua/plenary.nvim', 
+    	'nvim-telescope/telescope-live-grep-args.nvim',
+    	'natecraddock/workspaces.nvim'
     },
     opts = {
     },
 
     config = function()
+      print("telescope got loaded....")
       local telescope = require('telescope')
       telescope.load_extension("workspaces")
 
@@ -24,6 +24,7 @@ return {
       vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
       vim.keymap.set('n', '<leader>fo', builtin.oldfiles, { desc = 'Telescope Old Files' })
       vim.keymap.set('n', '<leader>fw', ":Telescope workspaces<cr>", { desc = 'Telescope workspaces' })
+
     end
   }
 }

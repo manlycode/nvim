@@ -2,7 +2,7 @@ return {
   {
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
-      "nvim-treesitter/nvim-treesitter-textobjects"
+      -- "nvim-treesitter/nvim-treesitter-textobjects"
     },
     build = ":TSUpdate",
     opts = {
@@ -74,7 +74,12 @@ return {
     },
 
     config = function(_, opts)
-      require("nvim-treesitter.configs").setup(opts)
+      require("nvim-treesitter.config").setup({
+        -- your existing configuration options
+        auto_install = true,
+        highlight = { enable = true },
+        indent = { enable = true },
+      })    
     end
   }
 }

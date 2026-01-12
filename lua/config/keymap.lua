@@ -1,3 +1,5 @@
+print("loaded keymaps")
+
 vim.keymap.set('n', '<leader>ev', ":tabe<CR>:WorkspacesOpen nvim<CR><Esc>:tabe init.lua<CR>",
   { desc = 'Edit nvim files' })
 vim.keymap.set('n', '<leader>ew', "<Esc>:tabe workspace.lua<CR>", { desc = 'Edit nvim files' })
@@ -42,3 +44,5 @@ vim.keymap.set('n', '<D-<>', function()
   vim.diagnostic.jump({ diagnostic = vim.diagnostic.get_prev() })
   vim.diagnostic.open_float()
 end, { desc = "Go to next diagnostic" })
+
+

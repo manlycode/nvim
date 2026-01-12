@@ -1,24 +1,24 @@
+vim.g.mapleader = ","
+vim.g.maplocalleader = ",,"
+
 local modules = {
   "config.defaults",
   "config.util",
   "config.lazy",
   "config.neovide",
-  "config.workspace",
   "config.keymap",
-  "config.colorscheme",
+  -- "config.colorscheme",
   "config.autocmd",
 }
-
-vim.g.maplocalleader = ','
 
 for _, module in ipairs(modules) do
   package.loaded[module] = nil
   require(module)
 end
 
-require("language")
+-- require("language")
 PrintCWD()
-RequireDir("language")
+-- RequireDir("language")
 
 -- require("config.defaults")
 -- require("config.util")

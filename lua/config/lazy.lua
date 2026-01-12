@@ -1,3 +1,4 @@
+print("lazy.lua start....")
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -22,10 +23,9 @@ vim.g.mapleader = ","
 vim.g.maplocalleader = ",,"
 
 -- Setup lazy.nvim
-
 if vim.g.vscode then
   print("vscode got loaded....")
-  require("lazy").setup({
+  lazy = require("lazy").setup({
     spec = {
       -- import your plugins
       { import = 'vscode-plugins' },
@@ -37,7 +37,9 @@ if vim.g.vscode then
     checker = { enabled = true },
   })
 else
-  require("lazy").setup({
+  lazy =require("lazy").setup({
+    print("regular got loaded....")
+
     spec = {
       -- import your plugins
       { import = "plugins" },
@@ -49,3 +51,5 @@ else
     checker = { enabled = true },
   })
 end
+
+print("lazy.lua end....")
