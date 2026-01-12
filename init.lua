@@ -7,7 +7,7 @@ local modules = {
   "config.lazy",
   "config.neovide",
   "config.keymap",
-  -- "config.colorscheme",
+  "config.colorscheme",
   "config.autocmd",
 }
 

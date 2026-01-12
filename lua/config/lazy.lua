@@ -24,12 +24,12 @@ vim.g.maplocalleader = ",,"
 
 -- Setup lazy.nvim
 if vim.g.vscode then
-  print("vscode got loaded....")
   lazy = require("lazy").setup({
     spec = {
       -- import your plugins
       { import = 'vscode-plugins' },
     },
+    local_spec = false,
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.
     install = { colorscheme = { "habamax" } },
@@ -38,12 +38,11 @@ if vim.g.vscode then
   })
 else
   lazy =require("lazy").setup({
-    print("regular got loaded....")
-
     spec = {
       -- import your plugins
       { import = "plugins" },
     },
+    local_spec = false,
     -- Configure any other settings here. See the documentation for more details.
     -- colorscheme that will be used when installing plugins.
     install = { colorscheme = { "habamax" } },
